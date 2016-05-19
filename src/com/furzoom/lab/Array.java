@@ -1,5 +1,7 @@
 package com.furzoom.lab;
 
+import java.util.Arrays;
+
 public class Array {
     public static void main(String[] args) {
         int[] day;
@@ -34,6 +36,35 @@ public class Array {
         System.out.println("\tarr5\t: " + arr5.length);
         System.out.println("\t\tarr5[0]\t: " + arr5[0].length);
         System.out.println("\t\tarr5[1]\t: " + arr5[1].length);
+        System.out.println("\t\tarr5: ");
+        for (int[] i : arr5) {
+            System.out.print("\t\t\t");
+            for (int j : i) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
 
+        System.out.println("\nfill");
+        Arrays.fill(month, 1);
+        displayArray(month);
+        Arrays.fill(month, 3, 10, 7);
+        displayArray(month);
+        Arrays.sort(month);
+        displayArray(month);
+
+        System.out.println("\ncopyOf");
+        int[] arr6 = Arrays.copyOf(month, 6);
+        displayArray(arr6);
+        displayArray(Arrays.copyOf(month, 14));
     }
+
+    private static void displayArray(int[] arr) {
+        System.out.print("\t\t");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
 }
