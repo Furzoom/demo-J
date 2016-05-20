@@ -45,18 +45,52 @@ public class Array {
             System.out.println();
         }
 
-        System.out.println("\nfill");
+        System.out.println("\nArrays.fill");
         Arrays.fill(month, 1);
         displayArray(month);
-        Arrays.fill(month, 3, 10, 7);
+        Arrays.fill(month, 3, 12, 7);
         displayArray(month);
         Arrays.sort(month);
         displayArray(month);
 
-        System.out.println("\ncopyOf");
-        int[] arr6 = Arrays.copyOf(month, 6);
-        displayArray(arr6);
+        System.out.println("\nArrays.copyOf");
+        displayArray(Arrays.copyOf(month, 6));
         displayArray(Arrays.copyOf(month, 14));
+
+        System.out.println("\nArrays.copyOfRange");
+        displayArray(Arrays.copyOfRange(month, 1, 5));
+        displayArray(Arrays.copyOfRange(month, 1, 14));
+
+        int[] arr6 = new int[]{20, 40, 90, 30, 80, 50, 70};
+        
+        System.out.println("\nInsert sort\n\tBefore sort");
+        displayArray(arr6);
+        int temp;
+        int j;
+        for (int i = 1; i < arr6.length; ++i) {
+            temp = arr6[i];
+            for (j = i - 1; j >= 0 && arr6[j] > temp; --j) {
+                arr6[j + 1] = arr6[j];
+            }
+            arr6[j + 1] = temp;
+        }
+        System.out.println("\tAfter sort");
+        displayArray(arr6);
+
+        int[] arr7 = new int[]{20, 40, 90, 30, 80, 50, 70};
+        System.out.println("\nBubble Sort\n\tBefore sort");
+        displayArray(arr7);
+        for (int i = arr7.length - 1; i > 0; --i) {
+            for (j = 0; j < i; ++j) {
+                if (arr7[j] > arr7[j + 1]) {
+                    temp = arr7[j];
+                    arr7[j] = arr7[j + 1];
+                    arr7[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("\tAfter sort");
+        displayArray(arr7);
     }
 
     private static void displayArray(int[] arr) {
