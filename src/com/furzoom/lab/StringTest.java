@@ -159,8 +159,8 @@ public class StringTest {
         StringBuilder builder = new StringBuilder("");
         s4 = "";
         startTime = System.currentTimeMillis();
-        for (i = 0; i < 10000; ++i) {
-            s4.append(i);
+        for (long i = 0; i < 10000; ++i) {
+            builder.append(i);
         }
         endTime = System.currentTimeMillis();
         System.out.println("StringBuilder cost: " + (endTime - startTime));
