@@ -21,8 +21,13 @@ public class E13 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		printChar('a');
+		printChar('b');
+		printChar('1');
+	}
+	
+	public static void printChar(char c) {
+		System.out.println(c + ":" + (int)c + " "+ Integer.toBinaryString(c));
 	}
 
 }
