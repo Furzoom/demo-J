@@ -1,6 +1,9 @@
 package com.furzoom.lab.ch6;
 
-public class E07 {
-	//TODO: unimplement
+import com.furzoom.lab.ch6.pkg.*;
 
+public class E07 {
+	public static void main(String[] args) {
+		Widget w = new Widget();
+	}
 }
