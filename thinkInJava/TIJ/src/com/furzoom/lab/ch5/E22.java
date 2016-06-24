@@ -1,13 +1,10 @@
 package com.furzoom.lab.ch5;
 
 public class E22 {
-	public enum Coins {
-		PENNY, NICKEL, DIME, QUARTER, HALF, DOLLAR_COIN
-	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		for (Coins c : Coins.values()) {
+		for (Coins2 c : Coins2.values()) {
 			switch (c) {
 			case PENNY:
 				System.out.println(0.01);
@@ -31,4 +28,8 @@ public class E22 {
 		}
 	}
 
+}
+
+enum Coins2 {
+	PENNY, NICKEL, DIME, QUARTER, HALF, DOLLAR_COIN
 }
