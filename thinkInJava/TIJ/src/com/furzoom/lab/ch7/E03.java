@@ -12,7 +12,7 @@ package com.furzoom.lab.ch7;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 22, 2016 6:10:46 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class E03 extends Drawing{

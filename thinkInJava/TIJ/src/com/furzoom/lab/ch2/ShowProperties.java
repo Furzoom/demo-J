@@ -12,7 +12,7 @@ import java.util.Date;
  * ClassName    : ShowProperties <br>
  * date         : 2016-5-30 11:45:23 <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class ShowProperties {

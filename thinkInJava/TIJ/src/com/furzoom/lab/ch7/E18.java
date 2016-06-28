@@ -14,7 +14,7 @@ import java.util.Random;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 24, 2016 9:47:36 AM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class E18 {

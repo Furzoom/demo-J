@@ -12,7 +12,7 @@ package com.furzoom.lab.ch5;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 17, 2016 3:54:14 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class SimpleConstructor {

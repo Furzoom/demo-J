@@ -12,7 +12,7 @@ package com.furzoom.lab.ch3;
  * Reason       : TODO ADD REASON. <br>
  * date         : May 30, 2016 3:40:33 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class E03 {
@@ -45,7 +45,7 @@ public class E03 {
  * Reason       : TODO ADD REASON. <br>
  * date         : May 30, 2016 3:40:43 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version
  */
 class Letter {

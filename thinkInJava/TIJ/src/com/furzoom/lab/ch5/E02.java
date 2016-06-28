@@ -12,7 +12,7 @@ package com.furzoom.lab.ch5;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 17, 2016 3:58:50 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class E02 {

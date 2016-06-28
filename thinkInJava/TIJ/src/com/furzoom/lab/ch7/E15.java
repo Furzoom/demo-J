@@ -14,7 +14,7 @@ import com.furzoom.lab.ch7.pkg.E15Test;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 23, 2016 1:27:41 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class E15 extends E15Test{

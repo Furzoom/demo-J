@@ -12,7 +12,7 @@ package com.furzoom.lab.ch7;
  * Reason       : TODO ADD REASON. <br>
  * date         : Jun 22, 2016 3:56:37 PM <br>
  * 
- * @author mayan
+ * @author furzoom
  * @version 
  */
 public class SprinklerSystem {
