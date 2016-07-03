@@ -32,12 +32,34 @@ public class Sequence {
 		return new SequenceSelector();
 	}
 
+	public Selector reverseSelector() {
+		return new Selector() {
+			private int i = items.length - 1;
+			public boolean end() {
+				return i == -1;
+			}
+			public void next() {
+				if (i > -1) {
+					i--;
+				}
+			}
+			public Object current() {
+				return items[i];
+			}
+		};
+	}
 	public static void main(String[] args) {
 		Sequence sequence = new Sequence(10);
 		for (int i = 0; i < 10; ++i) {
 			sequence.add(Integer.toString(i));
 		}
 		Selector selector = sequence.selector();
+		while (!selector.end()) {
+			System.out.println(selector.current());
+			selector.next();
+		}
+		
+		selector = sequence.reverseSelector();
 		while (!selector.end()) {
 			System.out.println(selector.current());
 			selector.next();
