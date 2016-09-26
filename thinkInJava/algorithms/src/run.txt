@@ -1,0 +1,5 @@
+java -cp ".;../lib/algs4.jar" com.furzoom.lab.algs.ch101.BinarySearch com/furzoom/lab/algs/ch101/tinyW.txt < com/furzoom/lab/algs/ch101/tinyT.txt
+java -cp ".;../lib/algs4.jar" com.furzoom.lab.algs.ch101.E10121 com/furzoom/lab/algs/ch101/E10121.txt
+java -cp ".;../lib/algs4.jar" com.furzoom.lab.algs.ch101.E10122 com/furzoom/lab/algs/ch101/tinyW.txt
+java -cp ".;../lib/algs4.jar" com.furzoom.lab.algs.ch101.E10123 com/furzoom/lab/algs/ch101/tinyW.txt - < com/furzoom/lab/algs/ch101/tinyT.txt
+java -cp ".;../lib/algs4.jar" com.furzoom.lab.algs.ch101.E10123 com/furzoom/lab/algs/ch101/tinyW.txt + < com/furzoom/lab/algs/ch101/tinyT.txt
