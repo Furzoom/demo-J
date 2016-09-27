@@ -4,7 +4,9 @@ public class E10110 {
 
 	public static void main(String[] args) 
 	{
-	    int[] a;
+	    
+	    @SuppressWarnings("unused")
+        int[] a;
 	    for (int i = 0; i < 10; i++)
 	    {
 	        // error

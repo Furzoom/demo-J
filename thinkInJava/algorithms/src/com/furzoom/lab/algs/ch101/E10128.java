@@ -3,8 +3,6 @@ package com.furzoom.lab.algs.ch101;
 import java.util.Arrays;
 
 import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 public class E10128
 {

@@ -1,6 +1,5 @@
 package com.furzoom.lab.algs.ch101;
 
-import java.util.Arrays;
 import edu.princeton.cs.algs4.*;
 
 
