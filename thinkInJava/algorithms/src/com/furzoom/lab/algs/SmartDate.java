@@ -4,10 +4,10 @@
  * Date        : Sep 27, 2016 9:45:00 AM
  * Copyright (c) 2013-2016, http://furzoom.com All Rights Reserved.
  */
-package com.furzoom.lab.algs.ch102;
+package com.furzoom.lab.algs;
 
 
-class SmartDate
+public class SmartDate
 {
     private final int month;
     private final int day;

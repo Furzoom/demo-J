@@ -15,22 +15,34 @@ package com.furzoom.lab.algs;
  */
 public class Accumulator
 {
-    private double total;
+    private double m;
+    private double s;
     private int n;
     
     public void addDataValue(double val)
     {
         n++;
-        total += val;
+        s = s + 1.0 * (n - 1) / n * (val - m) * (val - m);
+        m = m + (val - m) / n;
     }
     
     public double mean()
     {
-        return  total / n;
+        return m;
+    }
+    
+    public double var()
+    {
+        return s / (n - 1);
+    }
+    
+    public double stddev()
+    {
+        return Math.sqrt(this.var());
     }
     
     public String toString()
     {
-        return "Mean (" + n + " values): " + String.format("%7.5f", mean());
+        return String.format("%.5f %.5f", mean(), stddev());
     }
 }
