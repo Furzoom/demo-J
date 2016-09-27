@@ -23,6 +23,8 @@ public class E01 {
 		E01 e = new E01();
 		E01.Inner in = e.getInner();
 		in.print();
+		e = new E01("furzoom");
+		System.out.println(e.getInner());
 	}
 
 }
