@@ -34,7 +34,6 @@ public class CachedFactorizerTest {
 					}
 				}
 			});
-			threads[i].start();
 		}
 		for (int i = 0; i < COUNT; i++) {
 			try {
