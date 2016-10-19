@@ -26,9 +26,15 @@ public class CachedFactorizerTest {
 		for (int i = 0; i < COUNT; i++) {
 			threads[i] = new Thread(new Runnable() {
 				public void run() {
-					System.out.println(cf.service(random.nextInt(100)));
+					int n = 0;
+					while (n++ < 1000) {
+						int param = random.nextInt(10) + 1;
+						long[] result = cf.service(param);
+						System.out.println(param);
+					}
 				}
 			});
+			threads[i].start();
 		}
 		for (int i = 0; i < COUNT; i++) {
 			try {

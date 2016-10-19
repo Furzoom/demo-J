@@ -30,6 +30,8 @@ public class CachedFactorizer {
 			hits++;
 			return lastFactors;
 		} else {
+			hits++;
+			lastNumber = req;
 			lastFactors = factor(req);
 			return lastFactors;
 		}
@@ -37,8 +39,8 @@ public class CachedFactorizer {
 
 	private long[] factor(long num) {
 		ArrayList<Long> al = new ArrayList<Long>();
-		long limit = num / 2;
-		for (long i = 2; i <= limit; i++) {
+		al.add(1L);
+		for (long i = 2; i <= num; i++) {
 			if (i > num)
 				break;
 			while (num % i == 0) {
