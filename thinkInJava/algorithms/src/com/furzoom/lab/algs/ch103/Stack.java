@@ -59,6 +59,21 @@ public class Stack<Item> implements Iterable<Item>
     {
         return first.item;
     }
+    
+    public static <T> Stack<T> copy(Stack<T> s)
+    {
+        Iterator<T> it = s.iterator();
+        Stack<T> result = new Stack<T>();
+        Stack<T> temp = new Stack<T>();
+        while (it.hasNext()) {
+            temp.push(it.next());
+        }
+        it = temp.iterator();
+        while (it.hasNext()) {
+            result.push(it.next());
+        }
+        return result;
+    }
        
     @Override
     public Iterator<Item> iterator()
@@ -82,7 +97,6 @@ public class Stack<Item> implements Iterable<Item>
            p = p.next;
            return item;
         }
-        
     }
 
     public static void main(String[] args)
