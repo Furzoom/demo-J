@@ -6,6 +6,8 @@
  */
 package com.furzoom.lab.algs;
 
+import com.furzoom.lab.algs.ch103.Queue;
+
 /**
  * ClassName    : Date <br>
  * Function     : TODO ADD FUNCTION. <br>
@@ -24,6 +26,17 @@ public class Date
         month = m;
         day = d;
         year = y;
+    }
+    
+    public Date(String date)
+    {
+        String[] s = date.split("\\/");
+        if (s.length != 3) {
+            throw new IllegalArgumentException("Arguments illegal: " + date);
+        }
+        month = Integer.parseInt(s[0]);
+        day = Integer.parseInt(s[1]);
+        year = Integer.parseInt(s[2]);
     }
     
     public int month()
@@ -56,5 +69,22 @@ public class Date
         if (this.month != that.month) return false;
         if (this.year != that.year) return false; 
         return true;
+    }
+    
+    public static Date[] readDates(String s)
+    {
+        String[] dates = s.split(" ");
+        int n = dates.length;
+        Queue<Date> q = new Queue<Date>();
+        for (int i = 0; i < n; i++) {
+            q.enqueue(new Date(dates[i]));
+        }
+        
+        Date[] result = new Date[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = q.dequeue();
+        }
+           
+        return result;
     }
 }
