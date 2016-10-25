@@ -126,6 +126,34 @@ public class LinkList<Item> implements Iterable<Item>
         pos.next = node;
     }
     
+    public void remove(Item item)
+    {
+        while (first != null && item.equals(first.item))
+        {
+            first = first.next;
+        }
+        
+        Node<Item> current = first;
+        Node<Item> node;
+        while (current != null && current.next != null)
+        {
+            node = current.next;
+            if (item.equals(node.item))
+            {
+                current.next = node.next;
+            }
+            else
+            {
+                current = node;
+            }
+        }
+    }
+    
+    public int max()
+    {
+        return 0;
+    }
+    
     @Override
     public Iterator<Item> iterator()
     {
