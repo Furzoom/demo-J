@@ -118,6 +118,14 @@ public class LinkList<Item> implements Iterable<Item>
         return null;
     }
     
+    public void insertAfter(Node<Item> pos, Node<Item> node)
+    {
+        if (node == null || pos == node) 
+            return;
+        node.next = pos.next;
+        pos.next = node;
+    }
+    
     @Override
     public Iterator<Item> iterator()
     {
@@ -145,9 +153,9 @@ public class LinkList<Item> implements Iterable<Item>
         }
     }
     
-    public static void printList(LinkList<?> ll)
+    public void printList()
     {
-        Iterator<?> it = ll.iterator();
+        Iterator<Item> it = iterator();
         while (it.hasNext())
         {
             System.out.println(it.next());
@@ -163,27 +171,27 @@ public class LinkList<Item> implements Iterable<Item>
         ll.append("D");
         ll.append("e");
         
-        printList(ll);
+        ll.printList();
 
         System.out.println("delete last node");
         ll.deleteLastNode();
-        printList(ll);
+        ll.printList();
        
         System.out.println("delete node at 0");
         ll.delete(0);
-        printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 5");
         ll.delete(5);
-        printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 4");
         ll.delete(4);
-        printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 1");
         ll.delete(1);
-        printList(ll);
+        ll.printList();
     }
 }    
 

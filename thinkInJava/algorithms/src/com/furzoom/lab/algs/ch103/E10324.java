@@ -24,27 +24,27 @@ public class E10324
         ll.append("D");
         ll.append("e");
         
-        LinkList.printList(ll);
+        ll.printList();
         
         Node<String> node = ll.search("f");
         ll.removeAfter(node);
         System.out.println("remove after \"f\": ");
-        LinkList.printList(ll);
+        ll.printList();
         
         node = ll.search("e");
         ll.removeAfter(node);
         System.out.println("remove after \"e\": ");
-        LinkList.printList(ll);
+        ll.printList();
         
         node = ll.search("D");
         ll.removeAfter(node);
         System.out.println("remove after \"D\": ");
-        LinkList.printList(ll);
+        ll.printList();
         
         node = ll.search("a");
         ll.removeAfter(node);
         System.out.println("remove after \"a\": ");
-        LinkList.printList(ll);
+        ll.printList();
     }
            
 }

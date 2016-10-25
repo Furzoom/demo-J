@@ -17,6 +17,7 @@ public class E10319
 {
     private class Node 
     {
+        @SuppressWarnings("unused")
         int item;
         Node next;
     }

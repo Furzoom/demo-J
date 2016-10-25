@@ -24,21 +24,21 @@ public class E10320
         ll.append("D");
         ll.append("e");
         
-        LinkList.printList(ll);
+        ll.printList();
         System.out.println("delete node at 0");
         ll.delete(0);
-        LinkList.printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 5");
         ll.delete(5);
-        LinkList.printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 4");
         ll.delete(4);
-        LinkList.printList(ll);
+        ll.printList();
         
         System.out.println("delete node at 1");
         ll.delete(1);
-        LinkList.printList(ll);
+        ll.printList();
     }
 }
