@@ -17,17 +17,11 @@ import java.util.Iterator;
  */
 public class LinkList<Item> implements Iterable<Item>
 {
-    private Node first;
-    
-    private class Node
-    {
-        Item item;
-        Node next;
-    }
+    private Node<Item> first;
     
     public void append(Item item)
     {
-        Node node = new Node();
+        Node<Item> node = new Node<Item>();
         node.item = item;
         node.next = null;
         
@@ -37,7 +31,7 @@ public class LinkList<Item> implements Iterable<Item>
             return;
         }
         
-        Node current = first;
+        Node<Item> current = first;
         while (current.next != null)
         {
             current = current.next;
@@ -48,10 +42,10 @@ public class LinkList<Item> implements Iterable<Item>
     
     public void deleteLastNode()
     {
-        Node current = first;
+        Node<Item> current = first;
         if (current == null) return;
         
-        Node next = current.next;
+        Node<Item> next = current.next;
         if (next == null) 
         {
             first = null;
@@ -78,7 +72,7 @@ public class LinkList<Item> implements Iterable<Item>
         
         // make current equals k-1 node
         k--;
-        Node current = first;
+        Node<Item> current = first;
         while (current != null && --k != 0)
         {
             current = current.next;
@@ -94,6 +88,36 @@ public class LinkList<Item> implements Iterable<Item>
         }
     }
     
+    
+    public void removeAfter(Node<Item> node)
+    {
+        if (node == null || node.next == null)
+            return;
+        Node<Item> current = node.next;
+        Node<Item> next = current.next;
+        node.next = null;
+        while (current.next != null)
+        {
+            current = null;
+            current = next;
+            next = next.next;
+        }
+    }
+    
+    public Node<Item> search(Item item)
+    {
+        Node<Item> current = first;
+        while (current != null)
+        {
+            if (item.equals(current.item))
+            {
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+    
     @Override
     public Iterator<Item> iterator()
     {
@@ -102,7 +126,7 @@ public class LinkList<Item> implements Iterable<Item>
     
     private class It implements Iterator<Item>
     {
-        Node node = first;
+        Node<Item> node = first;
         @Override
         public boolean hasNext()
         {
@@ -161,4 +185,12 @@ public class LinkList<Item> implements Iterable<Item>
         ll.delete(1);
         printList(ll);
     }
+}    
+
+class Node<Item>
+{
+    Item item;
+    Node<Item> next;
 }
+    
+ 
