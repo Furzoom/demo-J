@@ -154,6 +154,20 @@ public class LinkList<Item> implements Iterable<Item>
         return 0;
     }
     
+    public Node<Item> reverse()
+    {
+        Node<Item> oldFirst = first;;
+        first = null;
+        while (oldFirst != null)
+        {
+            Node<Item> second = oldFirst.next;
+            oldFirst.next = first;
+            first = oldFirst;
+            oldFirst = second;
+        }
+        return first;
+    }
+    
     @Override
     public Iterator<Item> iterator()
     {
