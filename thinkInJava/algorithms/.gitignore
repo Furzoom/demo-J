@@ -1,2 +1,4 @@
 *.png
 tank/
+.idea/
+algorithms.iml
